@@ -1,103 +1,144 @@
-<!DOCTYPE html>
+---
+// src/pages/index.astro
+// DEOdharma Home Page - Optimized for Astro 2026
+const pageTitle = "DEOdharma | Bio-Physiological Resonance & Senior Safety";
+---
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEOdharma | Ethical • Social • Charitable</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
-        
-        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; }
-        h1, h2 { font-family: 'Playfair Display', serif; }
-        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.05); }
-        .hero-gradient { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); }
-    </style>
-</head>
-<body class="text-slate-800">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>DEOdharma</h1>
+				<p class="tagline">Bio-Physiological Resonance & Human Dignity</p>
+			</div>
+		</header>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 py-6 glass-card px-8 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-tighter">DEO<span class="text-red-700 font-light italic">dharma</span></div>
-        <div class="space-x-8 text-sm uppercase tracking-widest font-medium">
-            <a href="#ethics" class="hover:text-red-700 transition">Ethics</a>
-            <a href="#social" class="hover:text-red-700 transition">Social</a>
-            <a href="#charity" class="hover:text-red-700 transition">Charity</a>
-            <a href="#trust" class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-red-700 transition">The Trust</a>
-        </div>
-    </nav>
+		<main class="container">
+			<section class="hero">
+				<h2>Advancing Human Stability through Systems Engineering</h2>
+				<p>We leverage low-latency, air-gapped sensing technology to protect the vulnerable and empower the elderly. Our mission is <strong>Dharma</strong>: a path of service through non-invasive wellness.</p>
+				<a href="mailto:rajiv@deodharma.com" class="btn">Connect with our Mission</a>
+			</section>
 
-    <!-- Hero Section -->
-    <header class="relative h-[80vh] flex items-center justify-center text-center px-4 overflow-hidden bg-slate-900">
-        <div class="relative z-10">
-            <p class="text-red-400 uppercase tracking-[0.3em] text-sm mb-4">Bridging Tradition & Technology</p>
-            <h1 class="text-5xl md:text-7xl text-white mb-6">Service as a System.</h1>
-            <p class="text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">
-                DEOdharma positions the ethical, social, and charitable activities of the Trust through a framework of systemic integrity and ancient wisdom.
-            </p>
-        </div>
-        <div class="absolute inset-0 opacity-20 pointer-events-none">
-            <!-- Subtle geometric background overlay -->
-            <svg width="100%" height="100%"><rect width="100%" height="100%" fill="url(#grid)" /></svg>
-        </div>
-    </header>
+			<div class="mission-grid">
+				<div class="card">
+					<h3>Senior Fall Prevention</h3>
+					<p>Using no-contact mmWave sensing to monitor gait and posture. We provide ambient safety alerts without the privacy intrusion of cameras.</p>
+				</div>
+				<div class="card">
+					<h3>Physiological Grounding</h3>
+					<p>Real-time autonomic state monitoring via S3 architecture, offering acoustic bio-feedback to maintain physiological calm during stress spikes.</p>
+				</div>
+				<div class="card">
+					<h3>Air-Gapped Privacy</h3>
+					<p>Our DADAbus & S3 protocols ensure that personal bio-data remains local and secure, free from the tracking of the pharmaceutical industry.</p>
+				</div>
+			</div>
 
-    <!-- Pillars Section -->
-    <main class="max-w-7xl mx-auto py-24 px-8">
-        <div class="grid md:grid-cols-3 gap-12">
-            
-            <!-- Ethical -->
-            <section id="ethics" class="group">
-                <div class="h-1 bg-slate-200 mb-8 group-hover:bg-red-700 transition-all duration-500"></div>
-                <h2 class="text-3xl mb-4 italic text-slate-900">Ethical</h2>
-                <p class="text-slate-600 leading-relaxed">
-                    Governance defined by transparency and the philosophy of stewardship. We apply rigorous integrity to every decision, ensuring our technological and social outputs remain aligned with universal values.
-                </p>
-            </section>
+			<section class="legacy-note">
+				<p>"From 35 years of Enterprise Architecture to the pursuit of Life Modulation. Our goal is to ensure that senior years are defined by stability, grace, and independence."</p>
+				<p><strong>— Rajiv B Deo, Founder</strong></p>
+			</section>
+		</main>
 
-            <!-- Social -->
-            <section id="social" class="group">
-                <div class="h-1 bg-slate-200 mb-8 group-hover:bg-red-700 transition-all duration-500"></div>
-                <h2 class="text-3xl mb-4 italic text-slate-900">Social</h2>
-                <p class="text-slate-600 leading-relaxed">
-                    Moving from individual rituals to communal impact. Our social initiatives focus on infrastructure, digital literacy, and creating "Open-Source" social value for the community.
-                </p>
-            </section>
-
-            <!-- Charitable -->
-            <section id="charity" class="group">
-                <div class="h-1 bg-slate-200 mb-8 group-hover:bg-red-700 transition-all duration-500"></div>
-                <h2 class="text-3xl mb-4 italic text-slate-900">Charitable</h2>
-                <p class="text-slate-600 leading-relaxed">
-                    Transformative giving designed for self-sufficiency. We leverage our technical ecosystem to provide scalable aid, healthcare interventions, and educational support.
-                </p>
-            </section>
-
-        </div>
-    </main>
-
-    <!-- Call to Action -->
-    <section id="trust" class="bg-slate-100 py-20 px-8 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl mb-6">The DEO Innovations Legacy Trust</h2>
-            <p class="text-slate-600 mb-10 text-lg">
-                Codifying our commitment to humanitarian progress and the ethical distribution of intellectual property.
-            </p>
-            <button class="border-2 border-slate-900 px-10 py-3 text-sm uppercase tracking-widest font-bold hover:bg-slate-900 hover:text-white transition">
-                View Charter
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 px-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 uppercase tracking-widest">
-        <div>&copy; 2026 DEOdharma.com • All Rights Reserved</div>
-        <div class="mt-4 md:mt-0 space-x-6">
-            <a href="#" class="hover:text-slate-900">Privacy</a>
-            <a href="#" class="hover:text-slate-900">Terms</a>
-            <a href="https://deocore.dev" class="hover:text-slate-900">DEOcore.dev</a>
-        </div>
-    </footer>
-
-</body>
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; 2026 DEOdharma. All Rights Reserved.</p>
+				<p>A Social Impact Initiative powered by <a href="https://deocore.dev">DEOcore Technology Hub</a></p>
+			</div>
+		</footer>
+	</body>
 </html>
+
+<style>
+	:root {
+		--primary: #1a365d;
+		--accent: #2c5282;
+		--text: #2d3748;
+		--bg: #f7fafc;
+	}
+	
+	body {
+		font-family: 'Segoe UI', system-ui, sans-serif;
+		line-height: 1.6;
+		color: var(--text);
+		margin: 0;
+		background: var(--bg);
+	}
+
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	header {
+		background: white;
+		padding: 3rem 0;
+		text-align: center;
+		border-bottom: 4px solid var(--primary);
+	}
+
+	h1 { color: var(--primary); font-size: 3rem; margin: 0; }
+	.tagline { font-size: 1.2rem; color: var(--accent); margin-top: 0.5rem; }
+
+	.hero { text-align: center; padding: 4rem 0; }
+	.hero h2 { font-size: 2.2rem; color: var(--primary); }
+	.hero p { font-size: 1.25rem; max-width: 800px; margin: 1.5rem auto; }
+
+	.mission-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin: 4rem 0;
+	}
+
+	.card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+		border-top: 5px solid var(--accent);
+	}
+
+	.card h3 { color: var(--primary); margin-top: 0; font-size: 1.5rem; }
+
+	.legacy-note {
+		background: #e2e8f0;
+		padding: 2.5rem;
+		border-radius: 12px;
+		font-style: italic;
+		border-left: 8px solid var(--primary);
+		margin: 4rem 0;
+	}
+
+	.btn {
+		background: var(--primary);
+		color: white !important;
+		padding: 1rem 2rem;
+		text-decoration: none;
+		border-radius: 8px;
+		display: inline-block;
+		font-weight: bold;
+		transition: transform 0.2s;
+	}
+
+	.btn:hover { transform: translateY(-2px); }
+
+	.footer {
+		background: var(--primary);
+		color: white;
+		text-align: center;
+		padding: 3rem 0;
+		margin-top: 5rem;
+	}
+
+	.footer a { color: #bee3f8; text-decoration: underline; }
+</style>
