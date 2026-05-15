@@ -1,50 +1,103 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEOdharma | Ethical • Social • Charitable</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.05); }
+        .hero-gradient { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 py-6 glass-card px-8 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">DEO<span class="text-red-700 font-light italic">dharma</span></div>
+        <div class="space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="#ethics" class="hover:text-red-700 transition">Ethics</a>
+            <a href="#social" class="hover:text-red-700 transition">Social</a>
+            <a href="#charity" class="hover:text-red-700 transition">Charity</a>
+            <a href="#trust" class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-red-700 transition">The Trust</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[80vh] flex items-center justify-center text-center px-4 overflow-hidden bg-slate-900">
+        <div class="relative z-10">
+            <p class="text-red-400 uppercase tracking-[0.3em] text-sm mb-4">Bridging Tradition & Technology</p>
+            <h1 class="text-5xl md:text-7xl text-white mb-6">Service as a System.</h1>
+            <p class="text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">
+                DEOdharma positions the ethical, social, and charitable activities of the Trust through a framework of systemic integrity and ancient wisdom.
+            </p>
+        </div>
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <!-- Subtle geometric background overlay -->
+            <svg width="100%" height="100%"><rect width="100%" height="100%" fill="url(#grid)" /></svg>
+        </div>
+    </header>
+
+    <!-- Pillars Section -->
+    <main class="max-w-7xl mx-auto py-24 px-8">
+        <div class="grid md:grid-cols-3 gap-12">
+            
+            <!-- Ethical -->
+            <section id="ethics" class="group">
+                <div class="h-1 bg-slate-200 mb-8 group-hover:bg-red-700 transition-all duration-500"></div>
+                <h2 class="text-3xl mb-4 italic text-slate-900">Ethical</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Governance defined by transparency and the philosophy of stewardship. We apply rigorous integrity to every decision, ensuring our technological and social outputs remain aligned with universal values.
+                </p>
+            </section>
+
+            <!-- Social -->
+            <section id="social" class="group">
+                <div class="h-1 bg-slate-200 mb-8 group-hover:bg-red-700 transition-all duration-500"></div>
+                <h2 class="text-3xl mb-4 italic text-slate-900">Social</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Moving from individual rituals to communal impact. Our social initiatives focus on infrastructure, digital literacy, and creating "Open-Source" social value for the community.
+                </p>
+            </section>
+
+            <!-- Charitable -->
+            <section id="charity" class="group">
+                <div class="h-1 bg-slate-200 mb-8 group-hover:bg-red-700 transition-all duration-500"></div>
+                <h2 class="text-3xl mb-4 italic text-slate-900">Charitable</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Transformative giving designed for self-sufficiency. We leverage our technical ecosystem to provide scalable aid, healthcare interventions, and educational support.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Call to Action -->
+    <section id="trust" class="bg-slate-100 py-20 px-8 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl mb-6">The DEO Innovations Legacy Trust</h2>
+            <p class="text-slate-600 mb-10 text-lg">
+                Codifying our commitment to humanitarian progress and the ethical distribution of intellectual property.
+            </p>
+            <button class="border-2 border-slate-900 px-10 py-3 text-sm uppercase tracking-widest font-bold hover:bg-slate-900 hover:text-white transition">
+                View Charter
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 uppercase tracking-widest">
+        <div>&copy; 2026 DEOdharma.com • All Rights Reserved</div>
+        <div class="mt-4 md:mt-0 space-x-6">
+            <a href="#" class="hover:text-slate-900">Privacy</a>
+            <a href="#" class="hover:text-slate-900">Terms</a>
+            <a href="https://deocore.dev" class="hover:text-slate-900">DEOcore.dev</a>
+        </div>
+    </footer>
+
+</body>
 </html>
